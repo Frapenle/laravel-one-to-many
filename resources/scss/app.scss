@@ -1,0 +1,19 @@
+@import '~bootstrap/scss/bootstrap';
+@import '@fortawesome/fontawesome-free/css/all.css';
+
+.my-alert {
+    padding: 7px 10px;
+    font-weight: bold;
+}
+
+.text-small {
+    font-size: .8rem !important;
+}
+
+.text-small-th {
+    font-size: .8rem !important;
+}
+
+small {
+    font-size: .7rem;
+}
