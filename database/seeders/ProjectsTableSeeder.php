@@ -6,6 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Project;
 use Illuminate\Support\Facades\Storage;
+use App\Models\Type;
 
 class ProjectsTableSeeder extends Seeder
 {
@@ -33,6 +34,7 @@ class ProjectsTableSeeder extends Seeder
         while ($a <= 10) {
             Project::create([
                 'name' => fake()->unique()->name(),
+                'type_id' => Type::inRandomOrder()->first()->id,
                 'description' => fake()->text(1000),
                 'start_date' => fake()->dateTime(),
                 'update' => fake()->dateTime(),
